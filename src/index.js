@@ -16,8 +16,10 @@ const colors = [
 ];
 
 document.addEventListener("click", (e) => {
-  let size = 0.1 + 0.1 * Math.random();
-  let absoluteSize = Math.max(e.pageX, e.pageY) * size;
+  let size = 0.08 + 0.08 * Math.random();
+  let absoluteSize = Math.max(window.innerWidth, window.innerHeight) * size;
+  console.log(e);
+  console.log(document);
   const dot = document.createElement("div");
   dot.className = "dot";
   const color = colors.random();
