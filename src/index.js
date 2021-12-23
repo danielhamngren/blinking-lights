@@ -32,5 +32,5 @@ document.addEventListener("click", (e) => {
   tag.style.top = `${e.y - tag.clientHeight / 2}px`;
 
   tag.style.background = color;
-  tag.style.boxShadow = `0px 0px ${size / 2}px ${color}`;
+  tag.style.boxShadow = `0px 0px ${absoluteSize / 2}px ${color}`;
 });
