@@ -16,21 +16,21 @@ const colors = [
 ];
 
 document.addEventListener("click", (e) => {
-  let size = 20 + 20 * Math.random();
+  let size = 0.1 + 0.1 * Math.random();
+  let absoluteSize = Math.max(e.pageX, e.pageY) * size;
   const tag = document.createElement("div");
   tag.className = "dot";
   const color = colors.random();
-  console.log(color);
 
-  tag.style.left = `${e.x - size / 2}px`;
-  tag.style.top = `${e.y - size / 2}px`;
-  tag.style.height = `${size}px`;
-  tag.style.width = `${size}px`;
-  tag.style.background = color;
-  tag.style.boxShadow = `0px 0px ${size / 2}px ${color}`;
-
+  tag.style.height = `${absoluteSize}px`;
+  tag.style.width = `${absoluteSize}px`;
   const element = document.getElementById("app");
   if (element) {
     element.appendChild(tag);
   }
+  tag.style.left = `${e.x - tag.clientWidth / 2}px`;
+  tag.style.top = `${e.y - tag.clientHeight / 2}px`;
+
+  tag.style.background = color;
+  tag.style.boxShadow = `0px 0px ${size / 2}px ${color}`;
 });
