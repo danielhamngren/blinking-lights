@@ -18,19 +18,19 @@ const colors = [
 document.addEventListener("click", (e) => {
   let size = 0.1 + 0.1 * Math.random();
   let absoluteSize = Math.max(e.pageX, e.pageY) * size;
-  const tag = document.createElement("div");
-  tag.className = "dot";
+  const dot = document.createElement("div");
+  dot.className = "dot";
   const color = colors.random();
 
-  tag.style.height = `${absoluteSize}px`;
-  tag.style.width = `${absoluteSize}px`;
+  dot.style.height = `${absoluteSize}px`;
+  dot.style.width = `${absoluteSize}px`;
   const element = document.getElementById("app");
   if (element) {
-    element.appendChild(tag);
+    element.appendChild(dot);
   }
-  tag.style.left = `${e.x - tag.clientWidth / 2}px`;
-  tag.style.top = `${e.y - tag.clientHeight / 2}px`;
+  dot.style.left = `${e.x - dot.clientWidth / 2}px`;
+  dot.style.top = `${e.y - dot.clientHeight / 2}px`;
 
-  tag.style.background = color;
-  tag.style.boxShadow = `0px 0px ${absoluteSize / 2}px ${color}`;
+  dot.style.background = color;
+  dot.style.boxShadow = `0px 0px ${absoluteSize / 2}px ${color}`;
 });
