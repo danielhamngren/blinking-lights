@@ -6,13 +6,13 @@ Array.prototype.random = function () {
 
 const colors = [
   "red",
-  "green",
+  "lime",
   "blue",
   "orange",
   "yellow",
   "cyan",
   "magenta",
-  "pink"
+  "hotpink"
 ];
 
 document.addEventListener("click", (e) => {
