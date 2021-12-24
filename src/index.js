@@ -16,6 +16,9 @@ const colors = [
 ];
 
 document.addEventListener("click", (e) => {
+  const infoElement = document.getElementById("info");
+  infoElement.style.display = "none";
+
   let size = 0.08 + 0.08 * Math.random();
   let absoluteSize = Math.max(window.innerWidth, window.innerHeight) * size;
   const dot = document.createElement("div");
