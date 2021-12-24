@@ -1,6 +1,11 @@
 body {
   font-family: sans-serif;
   background: black;
+  height: 100%;
+}
+
+html {
+  height: 100%;
 }
 
 @keyframes blink {
@@ -21,4 +26,14 @@ body {
   animation-name: blink;
   animation-duration: 4s;
   animation-iteration-count: infinite;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+}
+#info {
+  color: gray;
+  margin: auto;
+  text-align: center;
 }
